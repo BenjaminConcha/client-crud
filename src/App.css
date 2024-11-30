@@ -1,0 +1,41 @@
+.add_btn {
+    text-align: right;
+}
+
+.container {
+    overflow: auto;
+}
+
+.form-control {
+    resize: none;
+}
+
+.left_view h3 {
+    font-size: 21px;
+}
+
+.left_view p {
+    font-weight: 600;
+}
+
+.left_view span {
+    font-weight: 400;
+}
+
+.left_view i {
+    -webkit-text-stroke: 0.5px;
+    margin-right: 3px;
+}
+
+.right_view p {
+    font-weight: 600;
+}
+
+.right_view span {
+    font-weight: 400;
+}
+
+.right_view i {
+    -webkit-text-stroke: 0.5px;
+    margin-right: 3px;
+}
