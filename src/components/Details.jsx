@@ -10,12 +10,15 @@ const Details = () => {
   const navigate = useNavigate();
 
   const getUser = async () => {
-    const res = await fetch(`http://localhost:8003/getuser/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res = await fetch(
+      `https://api-crud-6w08.onrender.com/getuser/${id}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const data = await res.json();
     console.log(data);
@@ -34,12 +37,15 @@ const Details = () => {
   }, []);
 
   const deleteUser = async (id) => {
-    const res2 = await fetch(`http://localhost:8003/deleteuser/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res2 = await fetch(
+      `https://api-crud-6w08.onrender.com/deleteuser/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const deletedata = await res2.json();
     console.log(deletedata);

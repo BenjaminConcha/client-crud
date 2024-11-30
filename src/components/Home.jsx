@@ -9,7 +9,7 @@ const Home = () => {
   const { delData, setDelData } = useContext(deleteData);
 
   const getData = async () => {
-    const res = await fetch("http://localhost:8003/getdata", {
+    const res = await fetch("https://api-crud-6w08.onrender.com/getdata", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -30,12 +30,15 @@ const Home = () => {
   }, []);
 
   const deleteUser = async (id) => {
-    const res2 = await fetch(`http://localhost:8003/deleteuser/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res2 = await fetch(
+      `https://api-crud-6w08.onrender.com/deleteuser/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const deletedata = await res2.json();
     console.log(deletedata);
     if (res2.status === 422 || !deletedata) {

@@ -33,7 +33,7 @@ const Registrar = () => {
 
     const { name, email, age, mobile, work, address, description } = inputValue;
 
-    const res = await fetch("http://localhost:8003/register", {
+    const res = await fetch("https://api-crud-6w08.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

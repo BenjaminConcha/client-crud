@@ -34,12 +34,15 @@ const Edit = () => {
   console.log(id);
 
   const getUser = async () => {
-    const res = await fetch(`http://localhost:8003/getuser/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res = await fetch(
+      `https://api-crud-6w08.onrender.com/getuser/${id}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const data = await res.json();
     console.log(data);
@@ -62,21 +65,24 @@ const Edit = () => {
 
     const { name, email, age, mobile, work, address, description } = inputValue;
 
-    const res2 = await fetch(`http://localhost:8003/updateuser/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        age,
-        mobile,
-        work,
-        address,
-        description,
-      }),
-    });
+    const res2 = await fetch(
+      `https://api-crud-6w08.onrender.com/updateuser/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          age,
+          mobile,
+          work,
+          address,
+          description,
+        }),
+      }
+    );
 
     const data2 = await res2.json();
     console.log(data2);
